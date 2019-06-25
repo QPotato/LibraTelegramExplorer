@@ -2,9 +2,14 @@
   "name": "telegram_template",
   "version": "1.0.0",
   "description": "Base empty Telegram Bot template in Typescript to fork and start working",
-  "main": "src/bot.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "main": "src/bot.js",  "scripts": {
+    "start": "npm run serve",
+    "build-ts": "tsc",
+    "postinstall": "npm run build-ts",
+    "serve": "node dist/bot.js",
+    "watch-node": "nodemon dist/bot.js",
+    "watch-ts": "tsc -w",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "repository": {
     "type": "git",
