@@ -21,7 +21,8 @@ const init = async () => {
             }
           };
         bot = new TelegramBot(telegramtoken, options);
-        bot.setWebHook(`${url}/bot${telegramtoken}`);
+        const webhook = `${url}:80/bot${telegramtoken}` 
+        bot.setWebHook(webhook);
     }
     else {
         console.log("Starting in lonpolling mode");
