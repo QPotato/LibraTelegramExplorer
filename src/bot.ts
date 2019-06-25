@@ -29,7 +29,7 @@ const init = async () => {
         console.log("Starting in lonpolling mode");
         bot = new TelegramBot(telegramtoken, { polling: true })
     }
-    bot.onText(/.*/, (msg) => {
+    bot.on('message', (msg) => {
         bot.sendMessage(msg.chat.id, "Oh, hi!");
     });
 }
