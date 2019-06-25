@@ -21,7 +21,8 @@ const init = async () => {
             }
           };
         bot = new TelegramBot(telegramtoken, options);
-        const webhook = `${url}:80/bot${telegramtoken}` 
+        const webhook = `${url}:80/bot${telegramtoken}`
+        console.log(webhook);
         bot.setWebHook(webhook);
     }
     else {
