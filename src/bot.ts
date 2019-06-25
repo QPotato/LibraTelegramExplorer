@@ -1,0 +1,35 @@
+import * as TelegramBot from 'node-telegram-bot-api';
+
+const init = async () => {
+    // Create the telegram bot
+    if (process.env.TELEGRAM === undefined)
+        throw new Error('No telegram token in environment');
+    const telegramtoken = process.env.TELEGRAM;
+    var bot : TelegramBot;
+    if(process.env.WEBHOOK && process.env.PORT){
+        console.log("Starting in webhook mode.");
+        const url = process.env.WEBHOOK;
+        const port = parseInt(process.env.PORT);
+        const options = {
+            webHook: {
+              // Port to which you should bind is assigned to $PORT variable
+              // See: https://devcenter.heroku.com/articles/dynos#local-environment-variables
+              port: port
+              // you do NOT need to set up certificates since Heroku provides
+              // the SSL certs already (https://<app-name>.herokuapp.com)
+              // Also no need to pass IP because on Heroku you need to bind to 0.0.0.0
+            }
+          };
+        bot = new TelegramBot(telegramtoken, options);
+        bot.setWebHook(`${url}/bot${telegramtoken}`);
+    }
+    else {
+        console.log("Starting in lonpolling mode");
+        bot = new TelegramBot(telegramtoken, { polling: true })
+    }
+    bot.onText(/.*/, (msg) => {
+        bot.sendMessage(msg.chat.id, "Oh, hi!");
+    });
+}
+
+init()
