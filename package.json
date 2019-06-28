@@ -2,7 +2,8 @@
   "name": "libra-testnet-telegram-explorer",
   "version": "1.0.0",
   "description": "Telegram bot that acts as a blockchain explorer for the Libra testnet.",
-  "main": "src/bot.js",  "scripts": {
+  "main": "src/bot.js",
+  "scripts": {
     "start": "npm run serve",
     "build-ts": "tsc",
     "postinstall": "npm run build-ts",
@@ -22,9 +23,11 @@
   },
   "homepage": "https://github.com/QPotato/LibraTelegramExplorer/blob/master/README.md",
   "dependencies": {
+    "libra-core": "^1.0.0-alpha",
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {
+    "@types/elliptic": "^6.4.9",
     "@types/node": "^12.0.10",
     "@types/node-telegram-bot-api": "^0.31.0",
     "prettier": "^1.18.2",
