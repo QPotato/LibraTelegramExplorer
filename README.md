@@ -1,4 +1,4 @@
-# typescript_telegram_base
+# Libra Explorer Telegram Bot
 Telegram bot that acts as a blockchain explorer for the Libra testnet.
 You can try it by talking to [@LibraExplorerBot](tg://resolve?domain=LibraExplorerBot)
 
