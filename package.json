@@ -1,7 +1,7 @@
 {
-  "name": "telegram_template",
+  "name": "libra-testnet-telegram-explorer",
   "version": "1.0.0",
-  "description": "Base empty Telegram Bot template in Typescript to fork and start working",
+  "description": "Telegram bot that acts as a blockchain explorer for the Libra testnet.",
   "main": "src/bot.js",  "scripts": {
     "start": "npm run serve",
     "build-ts": "tsc",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/QPotato/typescript_telegram_base.git"
+    "url": "git+https://github.com/QPotato/LibraTelegramExplorer.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/QPotato/typescript_telegram_base/issues"
+    "url": "https://github.com/QPotato/LibraTelegramExplorer/issues"
   },
-  "homepage": "https://github.com/QPotato/typescript_telegram_base#readme",
+  "homepage": "https://github.com/QPotato/LibraTelegramExplorer/blob/master/README.md",
   "dependencies": {
     "node-telegram-bot-api": "^0.30.0"
   },
