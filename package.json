@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/QPotato/LibraTelegramExplorer/blob/master/README.md",
   "dependencies": {
-    "libra-core": "^1.0.0-alpha",
+    "libra-core": "^1.0.4",
     "node-telegram-bot-api": "^0.30.0"
   },
   "devDependencies": {
